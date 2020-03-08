@@ -1,0 +1,31 @@
+.Sidebar {
+    position: fixed;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    width: 100vw;
+    height: 0vh;
+    background-color:rgba(102,129, 252, 1);
+    color: #fff;
+    z-index: 101;
+    transition: all 0.5 ease;
+    overflow: hidden;
+    transform: scaleY(0);
+    .Container {
+        height: 100%;
+    }
+    .Hamburger {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        &::before,
+        &::after {
+            background-color: #fff;
+        }
+    }
+    &.Open {
+        bottom: 0;
+        height: 100vh;
+        transform: scaleY(1);
+    }
+}

@@ -1,0 +1,24 @@
+.ScrollDown {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px;
+    font-weight: 400;
+    cursor: pointer;
+    .ArrowDown {
+        animation: linearUpDown 2s infinite ease;
+        border-color: #FF4081;
+    }
+}
+@keyframes linearUpDown {
+    0% {
+        transform: rotate(45deg) translateY(0,0);
+    }
+    50% {
+        transform: rotate(45deg) translate(10px,10px);
+    }
+    100% {
+        transform: rotate(45deg) translateY(0,0);
+    }
+}

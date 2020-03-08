@@ -1,0 +1,50 @@
+.Project {
+    margin-bottom: 20px;
+    padding: 1rem;
+    .Thumbnail {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        display: inline-block;
+        img {
+            width: 300px;
+            height: 250px;
+        }
+    }
+    .Content {
+        max-width: 600px;
+        padding: 1rem;
+        .Duration {
+            color: #aaa;
+            font-size: 12px;
+        }
+        h3 {
+            margin: 0 0 0 0;
+            color: #23a6d5;
+        }
+        p {
+            margin: 0 0 5px 0;
+            font-weight: bold;
+            max-width: 400px;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .Tag {
+            border: 2px solid #888;
+            border-radius: 2px;
+            padding: 3px;
+            color: #888;
+            font-weight: bolder;
+            font-size: 14px;
+            margin: 5px;
+            transition: all 0.3s ease;
+            &:hover {
+                transform: scale(1.1);;
+            }
+            img {
+                max-width: 15px;
+            }
+        }
+    }
+}

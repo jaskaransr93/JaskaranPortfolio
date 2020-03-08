@@ -1,0 +1,47 @@
+.Hamburger {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 0px;
+    box-sizing: border-box;
+    width: 50px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 103;
+    &::before,
+    &::after,
+    div {
+        content: ' ';
+        display: block;
+        width: 80%;
+        height: 4px;
+        background-color: #000;
+        margin: 0 auto 5px auto;
+        border-radius: 3px;
+    }
+    &:hover {
+        transform: scale(1.1);
+        &::before,
+        &::after,
+        div {
+            background-color: #555;
+        }
+    }
+    &::after {
+        margin-bottom: 0;
+    }
+    &.Active {
+        &::before {
+            transform: rotate(45deg) translateX(8px);
+        }
+        > div {
+            display: none;
+        }
+        &::after {
+            transform: rotate(-45deg) translateX(6px) translateY(1px);
+        }
+    }
+
+}
