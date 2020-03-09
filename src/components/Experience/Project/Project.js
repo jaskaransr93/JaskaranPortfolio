@@ -31,7 +31,7 @@ const Project = (props) => {
                         <div className="row">
                             {
                                 props.project.tags
-                                    .map((text) => <div className={classes.Tag}>{text}</div>)
+                                    .map((text) => <div key={text} className={classes.Tag}>{text}</div>)
                             }
                             {
                                 props.project.githubUrl &&

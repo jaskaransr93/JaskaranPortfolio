@@ -9,6 +9,7 @@ import Sidebar from './components/UI/Sidebar/Sidebar';
 
 import './App.scss';
 import Experience from './components/Experience/Experience';
+import Skills from './components/Skills/Skills';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState(null);
@@ -47,6 +48,8 @@ const App = () => {
           <Intro setCurrentPage={setCurrentPage} />
           <About />
           <Experience />
+          <Skills />
+          <Footer />
       {/* </ReactPageScroller> */}
       <Sidebar closeSidebar={closeSidebar} show={isSidebarOpen}  />
     </div>

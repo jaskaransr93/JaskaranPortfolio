@@ -5,7 +5,7 @@ import cssImage from '../../../assets/images/css.png';
 import jsImage from '../../../assets/images/js.png';
 import nodeImage from '../../../assets/images/node.png';
 import webpackImage from '../../../assets/images/webpack.png';
-import reactImage from '../../../assets/images/React-icon.svg';
+import reactImage from '../../../assets/images/react.png';
 import classes from './AboutCube.module.scss';
 
 const AboutCube = () => {

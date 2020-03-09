@@ -2,7 +2,6 @@ import React from 'react'
 
 import NavigationItems from '../../NavigationItems/NavigationItems';
 import Hamburger from '../Hamburger/Hamburger';
-import NavigationItem from '../../NavigationItems/NavigationItem/NavigationItem';
 import classes from './Header.module.scss';
 import Logo from '../../Logo/Logo';
 

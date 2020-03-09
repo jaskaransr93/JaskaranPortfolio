@@ -4,16 +4,17 @@ import experienceProjects from './data/experience';
 import projects from './data/projects';
 import Project from './Project/Project';
 import classes from './Experience.module.scss';
+import SectionHeading from '../UI/SectionHeading/SectionHeading';
 
 
 const Experience = () => {
     return (
         <section className={classes.Experience}>
-            <h1>Experience</h1>
+            <SectionHeading>Experience</SectionHeading>
             {
                 experienceProjects.map(project => <Project key={project.title} project={project}/>)
             }
-            <h1>Projects</h1>
+            <SectionHeading>Experience</SectionHeading>
             {
                 projects.map(project => <Project key={project.title} project={project}/>)
             }
