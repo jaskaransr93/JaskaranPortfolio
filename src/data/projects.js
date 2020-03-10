@@ -10,7 +10,7 @@ export default [
             "Used multiple media queries to support various viewports."
         ],
         "tags": [
-            "React.js", "d3.js", "SASS", "React-Reveal", "Firebase", "Webpack"
+            "React.js", "d3.js", "SASS", "React-Reveal", "Webpack"
         ],
         "githubUrl": "https://github.com/jaskaransr93/JaskaranPortfolio"
     },
