@@ -1,4 +1,5 @@
 import React, {useRef, useState, useEffect} from 'react'
+import Fade from 'react-reveal/Fade';
 
 import BubbleGraph from '../UI/BubbleGraph/BubbleGraph';
 import classes from './Skills.module.scss';
@@ -23,8 +24,11 @@ const Skills = (props) => {
             <section className={classes.Skills} id="skills">
                 <h1 id="#skills">Skills</h1>
                 <div className={classes.Container} ref={container}>
-                    <BubbleGraph width={width} height={height} padding={padding} data={props.skills} />
+                    <Fade top>
+                        <BubbleGraph width={width} height={height} padding={padding} data={props.skills} />
+                    </Fade>
                 </div>
+                
             </section>
         </GradientBackground>
     )

@@ -52,6 +52,7 @@
     "react-dev-utils": "^10.2.0",
     "react-dom": "^16.13.0",
     "react-page-scroller": "^2.0.6-beta",
+    "react-reveal": "^1.2.2",
     "resolve": "1.15.0",
     "resolve-url-loader": "3.1.1",
     "sass-loader": "^8.0.2",

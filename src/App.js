@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import Header from './components/UI/Header/Header';
 import Footer from './components/UI/Footer/Footer';
-import Intro from './containers/Intro/Intro';
+import Intro from './components/Intro/Intro';
 import About from './components/About/About';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 

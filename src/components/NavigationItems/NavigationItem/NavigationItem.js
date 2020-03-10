@@ -4,7 +4,7 @@ import classes from './NavigationItem.module.scss';
 const NavigationItem = (props) => {
     return (
          <li className={classes.NavigationItem}>
-             <a href={props.url}>{props.text}</a>
+             <a href={props.url} onClick={props.clicked}>{props.text}</a>
         </li>
     )
 }
