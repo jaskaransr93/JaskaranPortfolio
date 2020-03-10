@@ -14,7 +14,7 @@ const Intro = (props) => {
                 <div className={classes.Heading}>
                     <h1>Hello, my name is Jas</h1>
                     <h1>I am a Full Stack Developer</h1>
-                        <GradientButton href={resume}>Download my Resume</GradientButton>
+                    <GradientButton href={resume}>Download my Resume</GradientButton>
                 </div>
             </div>
             <ScrollDown href="#about" />

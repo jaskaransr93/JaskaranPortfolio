@@ -1,5 +1,20 @@
 export default [
     {
+        "image": 'portfolio.png',
+        "title": "Portfolio",
+        "description": "My Customized portfolio",
+        "role": [
+            "Designed the UI of the webpage.",
+            "Implemented customized animated components like rotating cube and bubble graph(in Skills).",
+            "Utilized react-reveal library to implement animation while scrolling the page.",
+            "Used multiple media queries to support various viewports."
+        ],
+        "tags": [
+            "React.js", "d3.js", "SASS", "React-Reveal", "Firebase", "Webpack"
+        ],
+        "githubUrl": "https://github.com/jaskaransr93/JaskaranPortfolio"
+    },
+    {
         "image": 'burgerBuilder.png',
         "title": "Burger Builder App",
         "description": "Build Customized burger and order",
@@ -15,7 +30,7 @@ export default [
         "githubUrl": "https://github.com/jaskaransr93/BurgerBuilderApp"
     },
     {
-        "image": 'pepfar.png',
+        "image": 'namar.png',
         "title": "Namar Canada",
         "description": "Funding Negotiation System",
         "role": [
