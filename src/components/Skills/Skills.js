@@ -1,12 +1,11 @@
 import React, {useRef, useState, useEffect} from 'react'
 
 import BubbleGraph from '../UI/BubbleGraph/BubbleGraph';
-import skills from './data/skills';
 import classes from './Skills.module.scss';
-import SectionHeading from '../UI/SectionHeading/SectionHeading';
+import GradientBackground from '../UI/GradientBackground/GradientBackground';
 
 
-const Skills = () => {
+const Skills = (props) => {
     const container = useRef(null);
     const [width, setWidth] = useState(0);
     const [height, setHeight] = useState(0);
@@ -20,12 +19,14 @@ const Skills = () => {
 
 
     return (
-        <section className={classes.Skills}>
-            <SectionHeading>Skills</SectionHeading>
-            <div className={classes.Container} ref={container}>
-                <BubbleGraph width={width} height={height} padding={padding} data={skills} />
-            </div>
-        </section>
+        <GradientBackground>
+            <section className={classes.Skills} id="skills">
+                <h1 id="#skills">Skills</h1>
+                <div className={classes.Container} ref={container}>
+                    <BubbleGraph width={width} height={height} padding={padding} data={props.skills} />
+                </div>
+            </section>
+        </GradientBackground>
     )
 }
 

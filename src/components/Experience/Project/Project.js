@@ -36,7 +36,7 @@ const Project = (props) => {
                             {
                                 props.project.githubUrl &&
                                     <div className={classes.Tag}>
-                                        <a href={props.project.githubUrl} target="_blank">
+                                        <a href={props.project.githubUrl} target="_blank" rel="noopener noreferrer">
                                             <img src={githubImage} alt="github" />
                                         </a>
                                     </div>

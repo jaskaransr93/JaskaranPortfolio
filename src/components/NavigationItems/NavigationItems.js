@@ -4,10 +4,10 @@ import classes from './NavigationItems.module.scss';
 const NavigationItems = (props) => {
     return (
         <ul className={[classes.NavigationItems].concat(props.containerCls).join(' ')}>
-            <NavigationItem url="#" text="About" />
-            <NavigationItem url="#" text="Experience" />
-            <NavigationItem url="#" text="Projects" />
-            <NavigationItem url="#" text="Contact" />
+            <NavigationItem url="#about" text="About" />
+            <NavigationItem url="#experience" text="Experience" />
+            <NavigationItem url="#projects" text="Projects" />
+            <NavigationItem url="#skills" text="Skills" />
         </ul>
     )
 }

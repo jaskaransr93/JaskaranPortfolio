@@ -1,20 +1,14 @@
 import React from 'react'
-
-import experienceProjects from './data/experience';
-import projects from './data/projects';
 import Project from './Project/Project';
 import classes from './Experience.module.scss';
 import SectionHeading from '../UI/SectionHeading/SectionHeading';
 
 
-const Experience = () => {
+const Experience = ({ id, projects, heading}) => {
     return (
-        <section className={classes.Experience}>
-            <SectionHeading>Experience</SectionHeading>
-            {
-                experienceProjects.map(project => <Project key={project.title} project={project}/>)
-            }
-            <SectionHeading>Experience</SectionHeading>
+
+        <section id={id} className={classes.Experience}>
+            <SectionHeading>{heading}</SectionHeading>
             {
                 projects.map(project => <Project key={project.title} project={project}/>)
             }

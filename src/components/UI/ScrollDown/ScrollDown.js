@@ -5,10 +5,10 @@ import classes from './ScrollDown.module.scss';
 
 const ScrollDown = (props) => {
     return (
-    <div className={classes.ScrollDown} onClick={props.clicked}>
+    <a href={props.href} className={classes.ScrollDown} onClick={props.clicked}>
         <div>SCROLL DOWN</div>
         <Arrow type="down" otherClasses={[classes.ArrowDown]}/>
-    </div>
+    </a>
     )
 }
 

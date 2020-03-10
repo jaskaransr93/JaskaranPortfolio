@@ -31,56 +31,46 @@ function createNodes(rawData) {
 
 const ticked = (bubbles, labels, images) => {
     bubbles
-      .attr('cx', d => d.x)
-      .attr('cy', d => d.y)
+        .attr('cx', d => d.x)
+        .attr('cy', d => d.y)
 
     labels
-      .attr('x', d => d.x)
-      .attr('y', d => d.y)
+        .attr('x', d => d.x)
+        .attr('y', d => d.y)
 
     images
-        .attr('x', d => d.x - (d.imageWidth / 2) )
-        .attr('y', d => d.y- (d.imageHeight / 2))
+        .attr('x', d => d.x - (d.imageWidth / 2))
+        .attr('y', d => d.y - (d.imageHeight / 2))
 
-  }
+}
 
 
 const charge = (d) => {
     return Math.pow(d.radius, 2.0) * 0.01
 }
 
-const randomInt = (min, max) => {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-};
-
-const fillColor = (d) => {
-    let h = randomInt(0, 360);
-    let s = randomInt(42, 98);
-    let l = randomInt(40, 90);
-    return `hsla(${h},${s}%,${l}%, 0.5)`;;
-}
-
-
 const BubbleGraph = (props) => {
-    
+
     const container = useRef(null);
     let { width, height, padding, clusterPadding, maxRadius, data } = props;
 
 
     useEffect(() => {
 
+
         // location to centre the bubbles
         const centre = { x: width / 2, y: height / 2 };
         // strength to apply to the position forces
         const forceStrength = 0.03;
         // these will be set in createNodes and chart functions
+        let containerSel = null;
         let svg = null;
         let bubbles = null;
         let labels = null;
         let images = null;
         let nodes = [];
 
-        
+
         // create a force simulation and add forces to it
         const simulation = d3.forceSimulation()
             .force('charge', d3.forceManyBody().strength(charge))
@@ -90,14 +80,20 @@ const BubbleGraph = (props) => {
             .force('collision', d3.forceCollide().radius(d => d.radius + 1));
         // force simulation starts up automatically, which we don't want as there aren't any nodes yet
         simulation.stop();
-        
+
         nodes = createNodes(data);
 
+        // Get container 
+        containerSel = d3.select(container.current);
+
+        // Remove  previous svg
+        containerSel.select('svg').remove();
+
         // create svg element inside provided selector
-        svg = d3.select(container.current)
-        .append('svg')
-        .attr('width', width)
-        .attr('height', height)
+        svg = containerSel
+            .append('svg')
+            .attr('width', width)
+            .attr('height', height)
 
         // bind nodes data to circle elements
         const elements = svg.selectAll('.bubble')
@@ -106,10 +102,10 @@ const BubbleGraph = (props) => {
             .append('g');
 
         bubbles = elements
-        .append('circle')
-        .classed('bubble', true)
-        .attr('r', d => d.radius)
-        .attr('fill', 'transparent');
+            .append('circle')
+            .classed('bubble', true)
+            .attr('r', d => d.radius)
+            .attr('fill', 'transparent');
 
         // labels
         labels = elements
@@ -121,18 +117,18 @@ const BubbleGraph = (props) => {
             .text(d => d.id)
 
         images = elements
-        // .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-        .append("svg:image")
-        .attr("xlink:href",function(d) {
-            if (d.image){
-                return require('../../../assets/images/'+d.image);
-            }
-            return require('../../../assets/images/js.png');
-        })
-        .attr("width",d => d.imageWidth)
-        .attr("height",d => d.imageHeight)
-        .attr("x",d => d.x - d.imageWidth / 2)
-        .attr("y",d => d.y - d.imageHeight / 2);
+            // .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+            .append("svg:image")
+            .attr("xlink:href", function (d) {
+                if (d.image) {
+                    return require('../../../assets/images/' + d.image);
+                }
+                return require('../../../assets/images/js.png');
+            })
+            .attr("width", d => d.imageWidth)
+            .attr("height", d => d.imageHeight)
+            .attr("x", d => d.x - d.imageWidth / 2)
+            .attr("y", d => d.y - d.imageHeight / 2);
 
         const dragstarted = (d) => {
             d3.event.sourceEvent.stopPropagation();
@@ -140,18 +136,18 @@ const BubbleGraph = (props) => {
             d.fx = d.x;
             d.fy = d.y;
         }
-        
+
         const dragged = (d) => {
             d.fx = d3.event.x;
             d.fy = d3.event.y;
         }
-        
+
         const dragended = (d) => {
             if (!d3.event.active) simulation.alphaTarget(0);
             d.fx = null;
             d.fy = null;
         }
-        
+
 
         bubbles.call(
             d3.drag()
@@ -162,16 +158,17 @@ const BubbleGraph = (props) => {
 
         images.call(
             d3.drag()
-            .on("start", dragstarted)
-            .on("drag", dragged)
-            .on("end", dragended)
+                .on("start", dragstarted)
+                .on("drag", dragged)
+                .on("end", dragended)
         )
 
         // set simulation's nodes to our newly created nodes array
         // simulation starts running automatically once nodes are set
         simulation.nodes(nodes)
-        .on('tick', () => ticked(bubbles, labels, images))
-        .restart();
+            .on('tick', () => ticked(bubbles, labels, images))
+            .restart();
+
     }, [data, height, width, maxRadius, clusterPadding, padding])
 
 
