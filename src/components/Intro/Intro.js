@@ -4,7 +4,6 @@ import Fade from 'react-reveal/Fade';
 import ScrollDown from '../UI/ScrollDown/ScrollDown';
 import GradientButton from '../UI/GradientButton/GradientButton';
 import classes from './Intro.module.scss';
-// import resume from '../../assets/pdf/Jaskaran Singh Resume.pdf';
 
 const Intro = (props) => {
     return (
