@@ -1,4 +1,18 @@
 .Footer {
     padding: 20px 1rem;
     border-top: 1px solid #eee;
+
+    .Email {
+        position: absolute;
+        left: 20px;
+
+        .Img {
+            height: 40px;
+            width: 40px;
+            padding: 5px;
+        }
+        .Address {
+            line-height: 40px;
+        }
+    }
 }

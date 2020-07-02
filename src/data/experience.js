@@ -1,5 +1,20 @@
 export default [
     {
+        "image": 'fliteplan.png',
+        "title": "Fliteplan International",
+        "description": "Multiple Projects: Notam Viewer, Flight Route Optimization, IATA Route Calculator",
+        "duration": "Apr 2020 - Jun 2020",
+        "role": [
+            "Develop web application to show optimized flight routes resulting in the ability for the company to compare flight costs, time, miles and fuel burn to reduce overall costs.",
+            "Assist with the development of the NOTAM application which displays up-to-date COVID-19 notifications to pilots and airline workers using Push notification or email notification.",
+            "Develop the visualization of the flight route to show cost differences in various regions by color-coding the flight map.",
+            "Develop a feature that summarizes  flight cost in the form of tabular data which shows flight costs based on specific regions, which resulted in a more accurate cost estimation of flight routes."
+        ],
+        "tags": [
+            "React", "Angular", "Node", "Express", "Material UI", "ChartJS"
+        ]
+    },
+    {
         "image": 'vaisala.jpg',
         "title": "Vaisala viewLinc - Optimus Information",
         "description": "Continuous monitoring for temperature, humidity and other parameters",
