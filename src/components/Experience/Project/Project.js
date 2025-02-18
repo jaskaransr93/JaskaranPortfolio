@@ -1,28 +1,28 @@
-import React, { useState, useEffect } from 'react'
-import Fade from 'react-reveal/Fade';
+import React from 'react'
 
-import githubImage from '../../../assets/images/github.png';
+// import githubImage from '../../../assets/images/github.png';
 import classes from './Project.module.scss';
+import { Fade } from 'react-awesome-reveal';
 
 const Project = (props) => {
-    const [image, setImage] = useState('');
-    useEffect(() => {
-        import(`../../../assets/images/${props.project.image}`).then(image => {
-            setImage(image.default)
-        });
-    }, [props.project.image])
+    // const [image, setImage] = useState('');
+    // useEffect(() => {
+    //     import(`../../../assets/images/${props.project.image}`).then(image => {
+    //         setImage(image.default)
+    //     });
+    // }, [props.project.image])
     return (
         <div className={[classes.Project].join(' ')}>
             <div className="row">
                     <div className="col-sm-5 end-sm middle-sm block-center">
-                        <Fade left>
+                        <Fade direction="left">
                             <div className={classes.Thumbnail}>
-                                <img src={image} alt="Source: Google Images" />
+                                <img src={`/assets/images/${props.project.image}`} alt="Source: Google Images" />
                             </div>
                         </Fade>
                     </div>
                 <div className="col-sm-7">
-                    <Fade right>
+                    <Fade direction="right">
                         <div className={classes.Content}>
                             <h3>{props.project.title}</h3>
                             <div className={classes.Duration}>{props.project.duration}</div>
@@ -41,7 +41,7 @@ const Project = (props) => {
                                     props.project.githubUrl &&
                                         <div className={classes.Tag}>
                                             <a href={props.project.githubUrl} target="_blank" rel="noopener noreferrer">
-                                                <img src={githubImage} alt="github" />
+                                                <img src="/assets/images/github.png" alt="github" />
                                             </a>
                                         </div>
                                 }

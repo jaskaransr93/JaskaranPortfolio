@@ -2,7 +2,7 @@ import React from 'react'
 import classes from './Sidebar.module.scss';
 import NavigationItems from '../../NavigationItems/NavigationItems';
 import Hamburger from '../Hamburger/Hamburger';
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 
 const Sidebar = (props) => {
     const cls = [classes.Sidebar];
@@ -10,15 +10,14 @@ const Sidebar = (props) => {
         cls.push(classes.Open);
     }
     return (
-        <Fade top when={props.show}>
-
-        <div className={cls.join(' ')}>
-            <Hamburger active otherCls={classes.Hamburger} clicked={props.closeSidebar} />
-            <div className={["row middle-xs center-xs", classes.Container].join(' ')}>
-                <NavigationItems containerCls="column center-xs" navItemClicked={() => props.closeSidebar()} />
+        // <Fade direction="right" >
+            <div className={cls.join(' ')}>
+                <Hamburger active otherCls={classes.Hamburger} clicked={props.closeSidebar} />
+                <div className={["row middle-xs center-xs", classes.Container].join(' ')}>
+                    <NavigationItems containerCls="column center-xs" navItemClicked={() => props.closeSidebar()} />
+                </div>
             </div>
-        </div>
-        </Fade>
+        // </Fade>
     )
 }
 

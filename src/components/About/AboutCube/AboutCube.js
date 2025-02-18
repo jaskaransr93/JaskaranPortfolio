@@ -1,34 +1,28 @@
-import React from 'react'
-
-import htmlImage from '../../../assets/images/html.png';
-import cssImage from '../../../assets/images/css.png';
-import jsImage from '../../../assets/images/js.png';
-import nodeImage from '../../../assets/images/node.png';
-import webpackImage from '../../../assets/images/webpack.png';
-import reactImage from '../../../assets/images/react.png';
+import React from 'react';
 import classes from './AboutCube.module.scss';
+import Image from 'next/image';
 
 const AboutCube = () => {
     return (
         <div className={classes.AboutCube}>
             <div className={[classes.Box, classes.ShowFront].join(' ')}>
                 <div className={[classes.Face, classes.Front].join(' ')}>
-                    <img src={htmlImage} alt="Html" />
+                    <Image width={180} height={180} src="/assets/images/html.png" alt="Html" />
                 </div>
                 <div className={[classes.Face, classes.Back].join(' ')}>
-                    <img src={cssImage} alt="css" />
+                    <Image width={180} height={180} src="/assets/images/css.png" alt="css" />
                 </div>
                 <div className={[classes.Face, classes.Right].join(' ')}>
-                    <img src={jsImage} alt="JavaScript" />
+                    <Image width={180} height={180} src="/assets/images/js.png" alt="JavaScript" />
                 </div>
                 <div className={[classes.Face, classes.Left].join(' ')}>
-                    <img src={nodeImage} alt="Node" />
+                    <Image width={180} height={180} src="/assets/images/node.png" alt="Node" />
                 </div>
                 <div className={[classes.Face, classes.Top].join(' ')}>
-                    <img src={webpackImage} alt="Webpack" />
+                    <Image width={180} height={180} src="/assets/images/webpack.png" alt="Webpack" />
                 </div>
                 <div className={[classes.Face, classes.Bottom].join(' ')}>
-                    <img src={reactImage} alt="React" />
+                    <Image width={180} height={180} src="/assets/images/react.png" alt="React" />
                 </div>
             </div>
         </div>

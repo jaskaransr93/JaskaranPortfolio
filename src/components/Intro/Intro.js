@@ -1,13 +1,13 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade';
 
 import ScrollDown from '../UI/ScrollDown/ScrollDown';
 import GradientButton from '../UI/GradientButton/GradientButton';
 import classes from './Intro.module.scss';
+import { Fade } from 'react-awesome-reveal';
 
 const Intro = (props) => {
     return (
-        <Fade bottom>
+        <Fade direction="down">
         <div className={classes.Intro}>
             <div className={classes.Content}>
                 <div className={classes.Heading}>

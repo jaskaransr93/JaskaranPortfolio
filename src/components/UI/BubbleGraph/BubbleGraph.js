@@ -121,29 +121,29 @@ const BubbleGraph = (props) => {
             .append("svg:image")
             .attr("xlink:href", function (d) {
                 if (d.image) {
-                    return require('../../../assets/images/' + d.image);
+                    return '/assets/images/' + d.image;
                 }
-                return require('../../../assets/images/js.png');
+                return '/assets/images/js.png';
             })
             .attr("width", d => d.imageWidth)
             .attr("height", d => d.imageHeight)
             .attr("x", d => d.x - d.imageWidth / 2)
             .attr("y", d => d.y - d.imageHeight / 2);
 
-        const dragstarted = (d) => {
-            d3.event.sourceEvent.stopPropagation();
-            if (!d3.event.active) simulation.alphaTarget(0.3).restart();
+        const dragstarted = (event, d) => {
+            event.sourceEvent.stopPropagation();
+            if (!event.active) simulation.alphaTarget(0.3).restart();
             d.fx = d.x;
             d.fy = d.y;
         }
 
-        const dragged = (d) => {
-            d.fx = d3.event.x;
-            d.fy = d3.event.y;
+        const dragged = (event, d) => {
+            d.fx = event.x;
+            d.fy = event.y;
         }
 
-        const dragended = (d) => {
-            if (!d3.event.active) simulation.alphaTarget(0);
+        const dragended = (event, d) => {
+            if (!event.active) simulation.alphaTarget(0);
             d.fx = null;
             d.fy = null;
         }

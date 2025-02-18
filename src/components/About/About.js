@@ -1,9 +1,10 @@
 import React from 'react'
-import Fade from 'react-reveal/Fade';
+import { Fade } from 'react-awesome-reveal';
 
 import AboutCube from './AboutCube/AboutCube';
 import classes from './About.module.scss';
 import GradientBackground from '../UI/GradientBackground/GradientBackground';
+
 const Skills = () => {
     return (
         <GradientBackground>
@@ -11,7 +12,7 @@ const Skills = () => {
             <div className="row center-xs">
                 <h1>About Me</h1>
                 <div className="row">
-                    <Fade left>
+                    <Fade direction="left">
                         <p className="col-sm col-xs-12">
                             Hi, I am a Full Stack Developer from Toronto, Canada.
                             Passionate about developing a product through different cycles of Software development.
@@ -21,7 +22,7 @@ const Skills = () => {
                         </p>
                     </Fade>
                     <div className="col-sm col-xs-12">
-                        <Fade right>
+                        <Fade direction="right">
                             <div className="center-block">
                                 <AboutCube />
                             </div>
