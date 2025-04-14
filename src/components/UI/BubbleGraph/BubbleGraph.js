@@ -1,5 +1,9 @@
 import React, { useRef, useEffect } from 'react'
 import * as d3 from "d3";
+import config from '../../../../next.config.mjs';
+
+const { basePath } = config;
+
 
 // data manipulation function takes raw data from csv and converts it into an array of node objects
 // each node will store data and visualisation values to draw a bubble
@@ -121,9 +125,9 @@ const BubbleGraph = (props) => {
             .append("svg:image")
             .attr("xlink:href", function (d) {
                 if (d.image) {
-                    return '/assets/images/' + d.image;
+                    return `${basePath}/assets/images/` + d.image;
                 }
-                return '/assets/images/js.png';
+                return `${basePath}/assets/images/js.png`;
             })
             .attr("width", d => d.imageWidth)
             .attr("height", d => d.imageHeight)

@@ -3,6 +3,9 @@ import React from 'react'
 // import githubImage from '../../../assets/images/github.png';
 import classes from './Project.module.scss';
 import { Fade } from 'react-awesome-reveal';
+import config from '../../../../next.config.mjs';
+
+const { basePath } = config;
 
 const Project = ({ project }) => {
     const { image, title, duration, description, role, tags, githubUrl  } = project
@@ -12,7 +15,7 @@ const Project = ({ project }) => {
                     <div className="col-sm-5 end-sm middle-sm block-center">
                         {image && <Fade direction="left">
                             <div className={classes.Thumbnail}>
-                                <img src={`/assets/images/${image}`} alt="Source: Google Images" />
+                                <img src={`${basePath}/assets/images/${image}`} alt="Source: Google Images" />
                             </div>
                         </Fade>}
                     </div>
@@ -36,7 +39,7 @@ const Project = ({ project }) => {
                                     githubUrl &&
                                         <div className={classes.Tag}>
                                             <a href={githubUrl} target="_blank" rel="noopener noreferrer">
-                                                <img src="/assets/images/github.png" alt="github" />
+                                                <img src={`${basePath}/assets/images/github.png`} alt="github" />
                                             </a>
                                         </div>
                                 }
