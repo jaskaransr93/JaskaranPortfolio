@@ -17,10 +17,12 @@
         .Duration {
             color: #aaa;
             font-size: 12px;
+            margin-bottom: 8px;
         }
         h3 {
             margin: 0 0 0 0;
             color: #23a6d5;
+            margin-bottom: 8px;
         }
         p {
             margin: 0 0 5px 0;
@@ -29,6 +31,10 @@
         }
         ul {
             padding-left: 20px;
+            margin-bottom: 16px;
+            li {
+                margin-bottom: 8px;
+            }
         }
         .Tag {
             border: 2px solid #888;
@@ -40,7 +46,9 @@
             margin: 5px;
             transition: all 0.3s ease;
             &:hover {
-                transform: scale(1.1);;
+                transform: scale(1.1);
+                color: #23a6d5;
+                border-color: #23a6d5;
             }
             img {
                 max-width: 15px;

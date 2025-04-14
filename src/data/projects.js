@@ -40,7 +40,7 @@ export default [
             "Used Axios to call Web APIs to fetch data from backend and update the states of the contexts."
         ],
         "tags": [
-            "React.js", "ASP.Net Web API", "Bootstrap"
+            "React.js", "ASP.Net Core", "Bootstrap"
         ],
         "githubUrl": "https://github.com/kenharis93/FundingPortalWebAPI"
     }

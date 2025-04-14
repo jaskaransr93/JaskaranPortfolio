@@ -27,7 +27,7 @@ const App = () => {
           <Intro />
           <About />
           <Experience id="experience" projects={experienceProjects} heading="Experience"/>
-          <Experience id="projects" projects={projects} heading="Projects"/>
+          {/* <Experience id="projects" projects={projects} heading="Projects"/> */}
           <Skills skills={skills}/>
       <Sidebar closeSidebar={closeSidebar} show={isSidebarOpen}  />
     </>

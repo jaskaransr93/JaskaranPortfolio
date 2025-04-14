@@ -15,10 +15,7 @@ const Skills = () => {
                     <Fade direction="left">
                         <p className="col-sm col-xs-12">
                             Hi, I am a Full Stack Developer from Toronto, Canada.
-                            Passionate about developing a product through different cycles of Software development.
-                            As a Web Developer, I am well organized, have ability to work independently,
-                            a problem solver and have high attention to details.
-                            Interested in learning more about Javascript libraries and cloud related technologies.
+                            Results-oriented Senior Developer, with 6+ years of experience in building and developing various applications on an enterprise level. Experienced in collaborating with cross-functional teams to ensure applications are user-friendly and well-designed. Ability to utilize strong communication skills to collaborate with people of diverse backgrounds and skill sets.
                         </p>
                     </Fade>
                     <div className="col-sm col-xs-12">
