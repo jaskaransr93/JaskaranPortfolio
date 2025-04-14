@@ -82,5 +82,23 @@ export default [
         value: 3,
         group: 1,
         image: 'npm.png'
+    },
+    {
+        id: 'angular',
+        value: 3,
+        group: 1,
+        image: 'angular_gradient.png'
+    },
+    {
+        id: 'docker',
+        value: 6,
+        group: 1,
+        image: 'docker.png'
+    },
+    {
+        id: 'nextjs',
+        value: 3,
+        group: 1,
+        image: 'nextjs.png'
     }
 ]

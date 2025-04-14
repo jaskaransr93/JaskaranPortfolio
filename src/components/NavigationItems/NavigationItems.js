@@ -6,7 +6,7 @@ const NavigationItems = (props) => {
         <ul className={[classes.NavigationItems].concat(props.containerCls).join(' ')}>
             <NavigationItem url="#about" text="About" clicked={props.navItemClicked} />
             <NavigationItem url="#experience" text="Experience" clicked={props.navItemClicked} />
-            <NavigationItem url="#projects" text="Projects" clicked={props.navItemClicked} />
+            {/* <NavigationItem url="#projects" text="Projects" clicked={props.navItemClicked} /> */}
             <NavigationItem url="#skills" text="Skills" clicked={props.navItemClicked} />
         </ul>
     )

@@ -10,7 +10,7 @@ const AboutCube = () => {
         <div className={classes.AboutCube}>
             <div className={[classes.Box, classes.ShowFront].join(' ')}>
                 <div className={[classes.Face, classes.Front].join(' ')}>
-                    <Image width={180} height={180} src={`${basePath}/assets/images/html.png`} alt="Html" />
+                    <Image width={180} height={180} src={`${basePath}/assets/images/angular_gradient.png`} alt="Html" />
                 </div>
                 <div className={[classes.Face, classes.Back].join(' ')}>
                     <Image width={180} height={180} src={`${basePath}/assets/images/css.png`} alt="css" />
