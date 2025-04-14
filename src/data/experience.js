@@ -2,7 +2,7 @@ export default [
     {
         // "image": 'fliteplan.png',
         "title": "Architech",
-        "description": "Multiple Projects: Telus B2B Wireline, Rogers 1source and InfoAssist apps, Contentful apps for customization",
+        "description": "Multiple Projects: Telus B2B Internet, Telus B2B Security, Telus B2B Phones, Telus B2B quiz, Rogers 1source and InfoAssist apps, Contentful apps for customization",
         "duration": "Aug 2020 – Present",
         "role": [
             "Designed and maintained enterprise web applications using React and Angular, with comprehensive unit testing via Jest and React Testing Library, while efficiently managing state with Redux and integrating with RESTful APIs.",
