@@ -5,7 +5,6 @@ import Intro from './components/Intro/Intro';
 import About from './components/About/About';
 import Sidebar from './components/UI/Sidebar/Sidebar';
 
-import './App.scss';
 import Experience from './components/Experience/Experience';
 import Skills from './components/Skills/Skills';
 import experienceProjects from './data/experience';
